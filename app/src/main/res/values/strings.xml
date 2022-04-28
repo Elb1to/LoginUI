@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">login_ui</string>
+    <string name="utp">Universidad Tecnologica de Panama</string>
+    <string name="grupo">1LS132</string>
+    <string name="user">Username</string>
+    <string name="pass">Password</string>
+    <string name="estudiante">Estudiante</string>
+    <string name="profesor">Profesor</string>
+    <string name="loginBtn">Login</string>
+</resources>

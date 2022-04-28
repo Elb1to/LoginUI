@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/utpLogo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/fisc_logo"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/titleTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/utpLogo"
+        android:layout_marginTop="15dp"
+        android:text="@string/utp"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/subtitleTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleTxt"
+        android:text="@string/grupo"
+        android:textAlignment="center" />
+
+    <!--Usuario-->
+    <EditText
+        android:id="@+id/userField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/subtitleTxt"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="25dp"
+        android:layout_toEndOf="@+id/persona"
+        android:hint="@string/user"
+        android:inputType="text" />
+
+    <ImageView
+        android:id="@+id/persona"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/subtitleTxt"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="45dp"
+        android:src="@drawable/descarga" />
+
+    <!--Contraseña-->
+    <EditText
+        android:id="@+id/passwordField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userField"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="25dp"
+        android:layout_toEndOf="@+id/candado"
+        android:hint="@string/pass"
+        android:inputType="textPassword" />
+
+    <ImageView
+        android:id="@+id/candado"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_below="@+id/userField"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="38dp"
+        android:src="@drawable/candado" />
+
+    <!--Radios-->
+    <RadioGroup
+        android:id="@+id/rgroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passwordField"
+        android:gravity="center_horizontal">
+
+        <RadioButton
+            android:id="@+id/studentR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/estudiante" />
+
+        <RadioButton
+            android:id="@+id/professorR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profesor" />
+    </RadioGroup>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rgroup"
+        android:layout_centerHorizontal="true"
+        android:onClick="checkEnteredValues"
+        android:text="@string/loginBtn" />
+</RelativeLayout>
